@@ -1,7 +1,7 @@
 ---
 layout: nil
 title: 404 - Not Found
-desctiption: CSS Radarへの記事のリクエストはTwitterで受け付けています
+desctiption: 404 - Not Found
 ---
 {% include system_head.html %}
 <body>
@@ -23,12 +23,6 @@ desctiption: CSS Radarへの記事のリクエストはTwitterで受け付けて
 						<p>
 							<a class="askme" href="mailto:cssradar+ask@gmail.com">質問やコメントはEメールにて cssradar+ask@gmail.com</a>
 						</p>
-						<h2>Recent Articles</h2>
-						<ul class="recent">
-							{% for post in site.posts limit:10 %}
-							<li><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-							{% endfor %}
-						</ul>
 					</div>
 				</div>
 			</div>

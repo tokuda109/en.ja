@@ -15,22 +15,22 @@ No styleguide reference.
 
 // Column-widths in variables, in ems
 
- @1cols: ( 1 * (@column + @gutter) - @gutter) / @em; @1col: @1cols;
- @2cols: ( 2 * (@column + @gutter) - @gutter) / @em;
- @3cols: ( 3 * (@column + @gutter) - @gutter) / @em;
- @4cols: ( 4 * (@column + @gutter) - @gutter) / @em;
- @5cols: ( 5 * (@column + @gutter) - @gutter) / @em;
- @6cols: ( 6 * (@column + @gutter) - @gutter) / @em;
- @7cols: ( 7 * (@column + @gutter) - @gutter) / @em;
- @8cols: ( 8 * (@column + @gutter) - @gutter) / @em;
- @9cols: ( 9 * (@column + @gutter) - @gutter) / @em;
-@10cols: (10 * (@column + @gutter) - @gutter) / @em;
-@11cols: (11 * (@column + @gutter) - @gutter) / @em;
-@12cols: (12 * (@column + @gutter) - @gutter) / @em;
-@13cols: (13 * (@column + @gutter) - @gutter) / @em;
-@14cols: (14 * (@column + @gutter) - @gutter) / @em;
-@15cols: (15 * (@column + @gutter) - @gutter) / @em;
-@16cols: (16 * (@column + @gutter) - @gutter) / @em;
+ @1cols: ( 1 * (@column + @gutter) - @gutter) / @em; @1col: @1cols; // 60px
+ @2cols: ( 2 * (@column + @gutter) - @gutter) / @em; // 150px
+ @3cols: ( 3 * (@column + @gutter) - @gutter) / @em; // 240px
+ @4cols: ( 4 * (@column + @gutter) - @gutter) / @em; // 330px
+ @5cols: ( 5 * (@column + @gutter) - @gutter) / @em; // 420px
+ @6cols: ( 6 * (@column + @gutter) - @gutter) / @em; // 510px
+ @7cols: ( 7 * (@column + @gutter) - @gutter) / @em; // 600px
+ @8cols: ( 8 * (@column + @gutter) - @gutter) / @em; // 690px
+ @9cols: ( 9 * (@column + @gutter) - @gutter) / @em; // 780px
+@10cols: (10 * (@column + @gutter) - @gutter) / @em; // 870px
+@11cols: (11 * (@column + @gutter) - @gutter) / @em; // 960px
+@12cols: (12 * (@column + @gutter) - @gutter) / @em; // 1050px
+@13cols: (13 * (@column + @gutter) - @gutter) / @em; // 1140px
+@14cols: (14 * (@column + @gutter) - @gutter) / @em; // 1230px 
+@15cols: (15 * (@column + @gutter) - @gutter) / @em; // 1320px
+@16cols: (16 * (@column + @gutter) - @gutter) / @em; // 1410px
 
 // Column-widths in a function, in ems
 
@@ -244,3 +244,10 @@ LESS helper
 
 No styleguide reference.
 */
+.link-block {
+	background-color: @base2;
+	margin-right: 16px;
+	padding: 3px 5px;
+		&:link { border-bottom: 0 none !important; }
+		&:hover { background-color: @base3; }
+}

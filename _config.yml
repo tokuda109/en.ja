@@ -1,8 +1,8 @@
 #Presentation Settings
-sitename: CSS Radar
-tagline: Mini Books For Front End Developers
-desc: 現役フロントエンドデベロッパ、斉藤祐也がフロントエンドにまつわる情報やTipsを紹介。2〜3年は遅れているという日本のウェブをアップデートしたい。そんな思いで更新していきます
-url: http://css.studiomohawk.com
+sitename: CSS Radar Newsletter
+tagline: Weekly Newsletter For Front End Developers
+desc: CSS Radar Newsletterはcssradar @ Twitterでつぶやいている最新の海外ウェブデベロップメント関連の情報をまとめてメールマガジンです。
+url: http://newsletter.studiomohawk.com
 #Deployment Settings
 lessc: _less.js/bin/lessc
 pygments:    true
