@@ -1,25 +1,11 @@
-task :default => [:"juicer:css"]
-
-namespace :juicer do
-  desc 'Merges stylesheets'
-    task :css => :"juicer:js" do
-      sh 'juicer merge --force _site/style/master.css'
-    end
-  desc 'Merges JavaScripts'
-    task :js do
-      sh  'juicer merge -i --force _site/js/master.js'
-    end
-end
-
 desc "rsync"
 task :rsync do
   system('rsync _site/ -ave ssh --delete studiomo@studiomohawk.com:www/css/')
 end
 
-
 namespace :post do
   desc "Given a title as an argument, create a new post file"
-  task :new, [:title, :category] do |t, args|
+  task :new, [:title] do |t, args|
     filename = "#{Time.now.strftime('%Y-%m-%d')}-#{args.title.gsub(/\s/, '-').downcase}.markdown"
     path = File.join("_posts", filename)
     if File.exist? path; raise RuntimeError.new("Won't clobber #{path}"); end
@@ -27,7 +13,7 @@ namespace :post do
       file.write <<-EOS
 ---
 layout: post
-category: #{args.category}
+category:
 title: #{args.title}
 date: #{Time.now.strftime('%Y-%m-%d %k:%M:%S')}
 ---
@@ -74,7 +60,7 @@ end
 
 desc "Deploy Amazon s3 Using s3Sync"
 task :deploy do
-  system('s3sync -rpv _site/ css.studiomohawk.com:')
+  system('s3sync -rpv _site/ newsletter.studiomohawk.com:')
 end
 
 desc "Optimise all PNG files with optipng"
