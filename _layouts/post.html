@@ -1,0 +1,85 @@
+{% include system_head.html %}
+<body>
+	<div id="page">
+		{% include header.html %}
+		<div id="main" role="main" class="unit-main">
+			<div class="unit-inner unit-main-inner">
+				<article class="the-article hentry">
+				<div class="article-inner">
+				<div class="content">
+					<header classs="unit-head">
+					<div class="unit-inner unit-head-inner">
+						<h1 class="h2 entry-title">{{ page.title }}</h1>
+						{% if page.ebook %}
+						<p>
+							<a href="{{ page.ebook }}" class="download icon-pictos" data-icon="~">Download E-Book .epub</a>
+						</p>
+						{% endif %}
+						<p class="tldr">{{ page.tldr }}</p>
+						<div class="hasGrid">
+							<p class="meta">
+								{% if page.update %}
+									<date class="update-pub" title="{{ page.update }}" datetime="{{ page.update }}" pubdate>
+										<span class="day">{{ page.update | date: '%d' }}</span>
+										<span class="month"><abbr>{{ page.update | date: '%b' }}</abbr></span>
+										<span class="year">{{ page.update | date: '%Y' }}</span>
+									</date>
+								{% endif %}
+									<date class="date-pub" title="{{ page.date | date_to_xmlschema }}" datetime="{{ page.date | date_to_xmlschema }}" pubdate>
+										<span class="day">{{ page.date | date: '%d' }}</span>
+										<span class="month"><abbr>{{ page.date | date: '%b' }}</abbr></span>
+										<span class="year">{{ page.date | date: '%Y' }}</span>
+									</date>
+							</p>
+							<div class="toc js-toc-switch">
+								<a href="#" class="js-toc-control">目次 <span class="icon-pictos" data-icon="+"></span></a>
+								<ul class="js-toc-list">
+									{% for toc in page.toc %}
+										<li><a href="{{ page.url }}#{{ toc.hash }}">{{ toc.text }}</a></li>
+									{% endfor %}
+								</ul>
+							</div>
+						</div>
+					</div>
+					</header>
+					<div class="bd">
+						<div class="entry-content">
+							{{ content }}
+						</div>
+						<div class="misc-content">
+							{% include social.html %}
+							{% include ask.html %}
+						</div>
+					</div>
+					<footer class="unit-foot">
+					<div class="unit-inner unit-foot-inner">
+						<nav class="pagination left">
+							<ul>
+								{% if page.previous %}
+								<li class="prev"><a class="internal" rel="prev"  href="{{ page.previous.url }}" title="View {{ page.previous.title }}">&laquo; {{ page.previous.title }}</a></li>
+								{% endif %}
+								{% if page.previous and page.next %}
+								<li class="pipe"> | </li>
+								{% endif %}
+								{% if page.next %}
+								<li class="next"><a class="internal" rel="next"  href="{{ page.next.url }}" title="View {{ page.next.title }}">{{ page.next.title }} &raquo;</a></li>
+								{% endif %}
+							</ul>
+						</nav>
+						<nav class="archive right">
+							<ul>
+								<li><a href="/">一覧にもどる</a></li>
+							</ul>
+						</nav>
+					</div>
+					</footer>
+				</div>
+			</div>
+			</article>
+		</div>
+		</div><!-- id="main" -->
+	{% include footer.html %}
+	</div><!-- id="page" -->
+	{% include system_foot.html %}
+</body>
+</html>

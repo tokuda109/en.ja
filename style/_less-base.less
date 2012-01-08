@@ -1,0 +1,246 @@
+/*
+Frameless			<http://framelessgrid.com/>
+by Joni Korpi 		<http://jonikorpi.com/>
+licensed under CC0	<http://creativecommons.org/publicdomain/zero/1.0/>
+
+No styleguide reference.
+*/
+
+@font-size: 16;			// Your base font-size in pixels
+@line-height: 26;		// Your base line-height in pixels
+@em: @font-size*1em;	// Shorthand for outputting ems, e.g. "12/@em"
+
+@column: 60;	// The column-width of your grid in pixels
+@gutter: 30;	// The gutter-width of your grid in pixels
+
+// Column-widths in variables, in ems
+
+ @1cols: ( 1 * (@column + @gutter) - @gutter) / @em; @1col: @1cols;
+ @2cols: ( 2 * (@column + @gutter) - @gutter) / @em;
+ @3cols: ( 3 * (@column + @gutter) - @gutter) / @em;
+ @4cols: ( 4 * (@column + @gutter) - @gutter) / @em;
+ @5cols: ( 5 * (@column + @gutter) - @gutter) / @em;
+ @6cols: ( 6 * (@column + @gutter) - @gutter) / @em;
+ @7cols: ( 7 * (@column + @gutter) - @gutter) / @em;
+ @8cols: ( 8 * (@column + @gutter) - @gutter) / @em;
+ @9cols: ( 9 * (@column + @gutter) - @gutter) / @em;
+@10cols: (10 * (@column + @gutter) - @gutter) / @em;
+@11cols: (11 * (@column + @gutter) - @gutter) / @em;
+@12cols: (12 * (@column + @gutter) - @gutter) / @em;
+@13cols: (13 * (@column + @gutter) - @gutter) / @em;
+@14cols: (14 * (@column + @gutter) - @gutter) / @em;
+@15cols: (15 * (@column + @gutter) - @gutter) / @em;
+@16cols: (16 * (@column + @gutter) - @gutter) / @em;
+
+// Column-widths in a function, in ems
+
+.width (@cols:1) { width: (@cols * (@column + @gutter) - @gutter) / @em; }
+
+/*
+Font families
+
+No styleguide reference.
+*/
+
+@font-stack: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, "MS PGothic", Osaka, Sans-Serif;
+@webfont: WalkwayBlackRegular, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, "MS PGothic", Osaka, Sans-Serif;
+
+/*
+Base font size should be larger than 16px.
+Calculation should be done via  http://j.mp/rNg5uA
+
+No styleguide reference.
+*/
+
+body {
+	font-family: @font-stack;
+	font-size: @font-size / 16*1em;
+	line-height: @line-height / @em;
+}
+
+/*
+Font size setting
+Using Golden ratio section (Caliculated via http://j.mp/sB6oxM):
+109.657	6.854	843.515 * h1
+82.241	5.14	632.623
+67.773	4.236	521.331
+50.829	3.177	390.992
+41.887	2.618	322.208 * h2
+31.415	1.963	241.654
+25.888	1.618	199.138 * h3
+19.416	1.214	149.354 * h4
+16.000	1	    123.077 * Base font size
+12.000	0.75	92.308  * Minimum font size
+Vertical Rhythm is caluculated via http://j.mp/sUvKuN
+
+No styleguide reference.
+*/
+
+h1, h2, h3, h4, h5, h6 { font-weight: bold; }
+
+h1, .h1 {
+	font-size: 110px;
+	line-height: 130px;
+	margin-top: 26px;
+	margin-bottom: 52px;
+}
+h2, .h2 {
+	font-size: 42px;
+	line-height: 52px;
+	margin-top: 52px;
+	margin-bottom: 26px;
+}
+h3, .h3 {
+	font-size: 26px;
+	line-height: 26px;
+	margin-top: 26px;
+	margin-bottom: 26px;
+}
+h4, .h4 {
+	font-size: 20px;
+	line-height: 26px;
+	margin-top: 26px;
+	margin-bottom: 26px;
+}
+p, ul, ol, dl, img {
+	margin-top: 0;
+	margin-bottom: @line-height / @em;
+}
+small, .small, aside { font-size: 0.75 * (@font-size / @em); }
+.font-size-default { font-size: @font-size / @em; }
+
+blockquote { font-weight: bold; }
+blockquote cite { font-weight: normal; }
+strong { font-weight: bold; }
+em { font-weight: bold; }
+
+/*
+Color schemes
+
+No styleguide reference.
+*/
+
+// solarized - http://j.mp/s9Xuw9
+
+@base03:    #002b36;
+@base02:    #073642;
+@base01:    #586e75;
+@base00:    #657b83;
+@base0:     #839496;
+@base1:     #93a1a1;
+@base2:     #eee8d5;
+@base3:     #fdf6e3;
+@yellow:    #b58900;
+@orange:    #cb4b16;
+@red:       #dc322f;
+@magenta:   #d33682;
+@violet:    #6c71c4;
+@blue:      #268bd2;
+@cyan:      #2aa198;
+@green:     #859900;
+
+/* Tomorrow Night - http://j.mp/wvO4U4
+
+@base03:    #2d2d2d;
+@base02:    #393939;
+@base01:    #515151;
+@base0:     #cccccc;
+@subtle:    #999999;
+@yellow:    #ffcc66;
+@orange:    #f99157;
+@red:       #f2777a;
+@violet:    #cc99cc;
+@blue:      #6699cc;
+@cyan:      #66cccc;
+@green:     #99cc99;
+
+* /
+
+/* Andy Clarke's Method - http://j.mp/AcDGjL
+
+@base-color : #468DB6;
+@comp-color : spin(@col, 180);
+
+@Col_l1 : lighten(@col, 5%);	// Lighten base
+@Col_l2 : lighten(@col, 10%);
+@Col_l3 : lighten(@col, 15%);
+@Col_l4 : lighten(@col, 20%);
+
+@Col_d1 : darken(@col, 5%);		// Darken base
+@Col_d2 : darken(@col, 10%);
+@Col_d3 : darken(@col, 15%);
+@Col_d4 : darken(@col, 20%);
+
+@Comp_l1 : lighten(@comp, 5%);	// Lighten complementary
+@Comp_l2 : lighten(@comp, 10%);
+@Comp_l3 : lighten(@comp, 15%);
+@Comp_l4 : lighten(@comp, 20%);
+
+@Comp_d1 : darken(@comp, 5%);	// Darken complementary
+@Comp_d2 : darken(@comp, 10%);
+@Comp_d3 : darken(@comp, 15%);
+@Comp_d4 : darken(@comp, 20%);
+
+*/
+
+/*
+Since I'm Japanese most of the time I use @font-face it is for logo and/or icon.
+Fonts should be placed at skin/font dir
+And icon font shoud be called via data-icon attr. See http://j.mp/s8zP67
+
+No styleguide reference.
+*/
+
+/* Pictos Font
+* Copyright © 2010 Drew Wilson
+* http://www.drewwilson.com  -  http://pictos.drewwilson.com
+*
+* The fonts included in this stylesheet are subject to the End User License you purchased
+* from Drew Wilson. The fonts are protected under domestic and international trademark and
+* copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+* distributing this font software.
+*
+* This font is NOT free. It is illegal to use this font without paying for a license.
+*/
+
+@font-face {
+	font-family: 'Pictos';
+	src: url('skin/font/pictos-web.eot');
+	src: local('☺'),
+		 url('skin/font/pictos-web.woff') format('woff'),
+		 url('skin/font/pictos-web.ttf') format('truetype'),
+		 url('skin/font/pictos-web.svg#webfontIyfZbseF') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+.icon-pictos:before {
+	content: attr(data-icon);
+	font-family: 'Pictos';
+	margin: 0 0.35em 0 0;
+	font-size: 20px;
+	line-height: normal;
+	font-weight: normal;
+	speak: none;
+}
+
+/* Walkway Font
+ * http://www.moorstation.org/typoasis/designers/gemnew/home.htm?w01.htm~mainFrame
+ * Using for Logo
+*/
+
+@font-face {
+    font-family: 'WalkwayBlackRegular';
+    src: url('skin/font/Walkway_Black-webfont.eot');
+    src: url('skin/font/Walkway_Black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('skin/font/Walkway_Black-webfont.woff') format('woff'),
+         url('skin/font/Walkway_Black-webfont.ttf') format('truetype'),
+         url('skin/font/Walkway_Black-webfont.svg#WalkwayBlackRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*
+LESS helper
+
+No styleguide reference.
+*/

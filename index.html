@@ -1,0 +1,38 @@
+---
+layout: home
+title: CSS Radar
+---
+<div class="article-list">
+{% for post in site.posts %}
+<article class="unit-article">
+	<div class="unit-inner unit-article-inner">
+		<h2 class="title"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+		<p class="tldr">{{ post.tldr }}</p>
+		<div class="hasGrid">
+			<p class="meta">
+			{% if post.update %}
+			<date class="update-pub" title="{{ post.update }}">
+				<span class="day">{{ post.update | date: '%d' }}</span>
+				<span class="month"><abbr>{{ post.update | date: '%b' }}</abbr></span>
+				<span class="year">{{ post.update | date: '%Y' }}</span>
+			</date>
+			{% endif %}
+			<date class="date-pub" title="{{ post.date | date_to_xmlschema }}">
+				<span class="day">{{ post.date | date: '%d' }}</span>
+				<span class="month"><abbr>{{ post.date | date: '%b' }}</abbr></span>
+				<span class="year">{{ post.date | date: '%Y' }}</span>
+			</date>
+			</p>
+			<div class="toc js-toc-switch">
+				<a href="#" class="js-toc-control">目次 <span class="icon-pictos" data-icon="+"></span></a>
+				<ul class="js-toc-list">
+					{% for toc in post.toc %}
+					<li><a href="{{ post.url }}#{{ toc.hash }}">{{ toc.text }}</a></li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+</article>
+{% endfor %}
+</div>
