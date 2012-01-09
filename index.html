@@ -1,12 +1,47 @@
 ---
 layout: home
-title: CSS Radar
+title: CSS Radar Newsletter
 ---
+<div class="attention">
+
+	<p class="onesentence">
+		海外の最新ウェブデベロップメント情報をキュレートし、<strong>1週間に1回</strong>、<strong>無料</strong>でメールでお届けします。
+	</p>
+
+	<div class="img-main">
+		<img src="/img/newsletter.png" alt="CSS Radar Newsletter">
+	</div>
+
+	<div class="signup">
+		<!-- Begin MailChimp Signup Form -->
+		<div id="mc_embed_signup">
+			<form action="http://studiomohawk.us2.list-manage.com/subscribe/post?u=0c8604ec46b9f779a3f5b6a1c&amp;id=7e22d97a1d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate subscribe" target="_blank">
+				<input type="email" value="" name="EMAIL" class="email input-text" id="mce-EMAIL" placeholder="Newsletterへの登録はこちらから" required>
+				<input type="submit" value="登録 (無料)" name="subscribe" id="mc-embedded-subscribe" class="input-submit">
+			</form>
+		</div>
+		<!--End mc_embed_signup-->
+		<p class="description small">
+			毎週金曜(または土曜)に1通のメールが届きます。登録も、解除も簡単。<br>
+			もちろんスパムはしませんし、メールアドレスは安全です。<br>
+			キュレータは<a href="/about/">斉藤祐也</a>です。コラボレータはいつでも募集中。
+		</p>
+		<p class="history">
+			どんなメールが届くか見てみたい場合は、<a href="/2011/12/30/vol13/">Vol. 13</a>、<a href="/2011/12/24/vol12/">Vol. 12</a>や下記から全バックナンバを閲覧できます。
+		</p>
+	</div>
+
+	{% include social.html %}
+</div>
+
 <div class="article-list">
+
+<h2>バックナンバ</h2>
+
 {% for post in site.posts %}
 <article class="unit-article">
 	<div class="unit-inner unit-article-inner">
-		<h2 class="title"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+		<p class="title h3"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></p>
 		<p class="meta">
 			<date class="date-pub" title="{{ post.date | date_to_xmlschema }}">
 				<span class="day">{{ post.date | date: '%d' }}</span>
@@ -17,4 +52,15 @@ title: CSS Radar
 	</div>
 </article>
 {% endfor %}
+</div>
+
+<div class="signup">
+	<!-- Begin MailChimp Signup Form -->
+	<div id="mc_embed_signup">
+		<form action="http://studiomohawk.us2.list-manage.com/subscribe/post?u=0c8604ec46b9f779a3f5b6a1c&amp;id=7e22d97a1d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate subscribe" target="_blank">
+			<input type="email" value="" name="EMAIL" class="email input-text" id="mce-EMAIL" placeholder="Newsletterへの登録はこちらから" required>
+			<input type="submit" value="登録 (無料)" name="subscribe" id="mc-embedded-subscribe" class="input-submit">
+		</form>
+	</div>
+	<!--End mc_embed_signup-->
 </div>

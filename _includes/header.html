@@ -4,6 +4,8 @@
 		<p class="logo h2"><a href="/">{{ site.sitename }}</a></p>
 		<p class="tagline">{{ site.tagline }}</p>
 	</div>
+
+	{% if page.layout != "home" %}
 	<nav class="nav-global">
 		<ul>
 			<li class="home"><a href="/" class="icon-pictos" data-icon="H">Home</a></li>
@@ -19,6 +21,7 @@
 		</form>
 	</div>
 	<!--End mc_embed_signup-->
+	{% endif %}
 
 </div>
 </header><!-- id="head" -->

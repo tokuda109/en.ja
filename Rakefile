@@ -1,8 +1,3 @@
-desc "rsync"
-task :rsync do
-  system('rsync _site/ -ave ssh --delete studiomo@studiomohawk.com:www/css/')
-end
-
 namespace :post do
   desc "Given a title as an argument, create a new post file"
   task :new, [:title] do |t, args|
@@ -13,28 +8,14 @@ namespace :post do
       file.write <<-EOS
 ---
 layout: post
-category:
-title: #{args.title}
+category: 
+title: "#{args.title}"
 date: #{Time.now.strftime('%Y-%m-%d %k:%M:%S')}
 ---
 EOS
     end
     puts "Now open #{path} in an editor."
   end
-end
-
-desc 'Ping pubsubhubbub server.'
-task :ping do
-  require 'cgi'
-  require 'net/http'
-  puts 'Pinging pubsubhubbub server'
-  data = 'hub.mode=publish&hub.url=' + CGI::escape("http://feeds.feedburner.com/CssRadar")
-  http = Net::HTTP.new('pubsubhubbub.appspot.com', 80)
-  resp, data = http.post('http://pubsubhubbub.appspot.com/publish',
-                         data,
-                         {'Content-Type' => 'application/x-www-form-urlencoded'})
-
-  puts "Ping error: #{resp}, #{data}" unless resp.code == "204"
 end
 
 desc "Launch preview environment"
@@ -55,7 +36,10 @@ task :package do
 
   print "Compressing assets..."
   system "jammit -o assets -c _assets.yml"
-  puts "done "
+  puts "done and now optipng"
+
+  Rake::Task["optipng"].invoke
+  puts "done. You can now deploy"
 end
 
 desc "Deploy Amazon s3 Using s3Sync"

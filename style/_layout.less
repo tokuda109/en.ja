@@ -209,16 +209,12 @@
 @media only screen and (min-width: 768px) {
 
 	.unit-the-head {
-		.unit-inner {
-			width: @8cols;
-		}
+		.unit-inner { width: @8cols; }
 	}
 
 	.the-article {
 
-		.unit-head-inner, .entry-content, .misc-content, .unit-foot-inner {
-			width: @8cols;
-		}
+		.unit-head-inner, .entry-content, .misc-content, .unit-foot-inner { width: @8cols; }
 		.title {
 			float: left;
 			margin-bottom: 0;
@@ -237,18 +233,34 @@
 	.page-archive {
 
 		.unit-main {
-			.unit-main-inner{
-				width: @8cols;
+			.unit-main-inner { width: @8cols; }
+
+			.signup {
+				width: 422px;
+				.input-text {
+					font-size: 18px;
+					padding: 4px;
+					width: 260px;
+				}
+				.input-submit {
+					padding-top: 10px;
+					padding-bottom: 9px;
+				}
+			}
+
+			.article-list {
+				margin-right: auto;
+				margin-left: auto;
+				width: @6cols;
 			}
 			.title {
 				float: left;
-				width: 330px;
+				width: 240px;
 			}
 			.meta {
 				float: right;
-				margin-top: (@line-height / @em) / 2;
 				text-align: right;
-				width: 330px;
+				width: 240px;
 			}
 		}
 
