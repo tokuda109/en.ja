@@ -35,7 +35,7 @@ task :package do
   Rake::Task["build"].invoke
 
   print "Compressing assets..."
-  system "jammit -o assets -c _assets.yml"
+  system "jammit -f -o assets -c _assets.yml"
   puts "done and now optipng"
 
   Rake::Task["optipng"].invoke
