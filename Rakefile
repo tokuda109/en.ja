@@ -8,7 +8,6 @@ namespace :post do
       file.write <<-EOS
 ---
 layout: post
-category: 
 title: "#{args.title}"
 date: #{Time.now.strftime('%Y-%m-%d %k:%M:%S')}
 ---
