@@ -4,8 +4,6 @@ title: "Vol.16"
 date: 2012-01-27  8:58:35
 ---
 
-# CSS Radar Vol.16
-
 ## Web Design, UX, UI
 
 ### [Mobile UX Primer by Ghost in the Pixel](http://www.ghostinthepixel.com/?p=644)
@@ -20,7 +18,7 @@ date: 2012-01-27  8:58:35
 大きく分けてこの3点についてまとめている。  
 非常によい記事なので翻訳できるよう筆者に確認中。
 
-[9 Principles of Lean UX by LUXr](http://luxr.co/lean-ux/9-principles-for-lean-ux/)
+### [9 Principles of Lean UX by LUXr](http://luxr.co/lean-ux/9-principles-for-lean-ux/)
 
 Lean UXにおける9つのプリンシパル
 
@@ -61,9 +59,17 @@ Yahoo!で働くJonathan SnookによるCSSのクラス命名規則。
 
 レスポンシブデザイン用のテストページHTML。iframeを使って1画面内に異なる幅と高さの画面を表示させる。非常にシンプルでエレガントな方法。
 
+## Web Tool
+
+### [Gridpak - The Responsive grid generator](http://gridpak.com/)
+
+レスポンシブウェブデザインのグリッド作成に便利なジェネレータ。グリッド用の画像、LESS、SASS、CSS、JavaScriptファイルを作成してくれる。  
+あとはバーティカルリズム用のグリッドも作ってくれればいうことなし。
+
 ## That's it for this week!
 
 社会人になって初めての長期休暇も終わりに近づいてきて、
+
 - CSS Radarのリニューアル [http://css.studiomohawk.com/](http://css.studiomohawk.com/)
 - CSS Radar NewsletterのMail Chimp移行 + [ランディングページ](http://newsletter.studiomohawk.com/)の作成
 - チュートリアルではなくオピニオン系ブログの作成 [http://www.studiomohawk.com/](http://www.studiomohawk.com/)
