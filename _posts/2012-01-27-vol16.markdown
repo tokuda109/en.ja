@@ -1,7 +1,81 @@
 ---
 layout: post
-title: "vol16"
+title: "Vol.16"
 date: 2012-01-27  8:58:35
 ---
 
+# CSS Radar Vol.16
 
+## Web Design, UX, UI
+
+### [Mobile UX Primer by Ghost in the Pixel](http://www.ghostinthepixel.com/?p=644)
+
+スマートフォンUXの基礎を3回にわたって紹介するシリーズ記事。
+基本のアイデア、ガイドライン、プリンシパルについて非常によくまとまっている。
+
+- モバイルUXとはなにか、そしてその重要性、プロセス
+- 考慮するべくキーファクタ
+- 気をつけるべき点
+
+大きく分けてこの3点についてまとめている。  
+非常によい記事なので翻訳できるよう筆者に確認中。
+
+[9 Principles of Lean UX by LUXr](http://luxr.co/lean-ux/9-principles-for-lean-ux/)
+
+Lean UXにおける9つのプリンシパル
+
+1. デザイン、プロダクトマネジメント、開発で1チーム
+2. 知識、アイデア、決定、コンセプトの共有
+3. 繰り返し利用できる問題の解決方法
+4. 目的、目標、結果にフォーカスする
+5. 考えて、作って、確認するというフロー
+6. 解決するべき問題だけにフォーカスする
+7. 多くの意見を作り出し、どれの意見を達成させるかをすぐ決める
+8. 仮定を認識して確認する
+9. ユーザリサーチこそ最適の情報源
+
+### [Are Design Patterns an Anti-pattern? by Boxes and Arrows](http://boxesandarrows.com/view/are-design-patterns)
+
+Yahoo!が公開しているようなデザインパターンは現実では更新されず、また更新にもコストがかかり、実践的な問題を解決できない。  
+デザインライブラリやデザインパターンを作成するよりも、コードベースのライブラリを作ること、そして何よりもライブラリに落とし込むまでのエコシステム自体を作り、運用することが大事。  
+
+[A Beginner’s Guide to Pairing Fonts by Webdesigntuts+](http://webdesign.tutsplus.com/articles/typography-articles/a-beginners-guide-to-pairing-fonts/)
+
+タイポグラフィ系の記事の紹介はそれほど反応がないが、英語と日本語では話が若干違うとはいえ、基礎は同じ。  
+この記事ではフォントのペアリングについての基本について。  
+複数のフォント、例えば見出しと本文など、を使う場合にペアリングという手法が用いられる。  
+同じフォントファミリーから別のフォントをペアリングするConcord、別のフォントファミリーから対比を生み出すペアリングであるContrastについて。  
+最後にフォント同士が喧嘩してしまうペアリングの失敗例であるConflictについても例示しながら紹介している。
+
+## CSS
+
+### [Naming Convention in CSS - Snook.ca](http://snook.ca/archives/html_and_css/naming-convention-in-css)
+
+Yahoo!で働くJonathan SnookによるCSSのクラス命名規則。  
+彼は[SMACSS](http://smacss.com/)の著者でもあり、そのSMACSSで提唱している命名規則についての記事。  
+大事なことは他者が見てもわかりやすい命名規則を作ることであり、かつその規則に一貫性を持たせること。
+
+## Snippets
+
+### [Simple responsive design test page by Bricss](http://bricss.net/post/16538278376/simple-responsive-design-test-page)
+
+レスポンシブデザイン用のテストページHTML。iframeを使って1画面内に異なる幅と高さの画面を表示させる。非常にシンプルでエレガントな方法。
+
+## That's it for this week!
+
+社会人になって初めての長期休暇も終わりに近づいてきて、
+- CSS Radarのリニューアル [http://css.studiomohawk.com/](http://css.studiomohawk.com/)
+- CSS Radar NewsletterのMail Chimp移行 + [ランディングページ](http://newsletter.studiomohawk.com/)の作成
+- チュートリアルではなくオピニオン系ブログの作成 [http://www.studiomohawk.com/](http://www.studiomohawk.com/)
+- LESS.jsのオフィシャルサイトの翻訳 (http://less-ja.studiomohawk.com/)[http://less-ja.studiomohawk.com/]
+- [Jekyll-Bootstrap](http://jekyllbootstrap.com/) というオープンソースプロジェクトへのテーマファイルの作成などで参加。
+などを無事に終了しリリースしました。
+
+何度もしつこいですが、[SwapSkills(25) 時短、効率、スピードアップのための はじめての LESS 入門](http://swapskills.info/month/25.html)での登壇のためのスライド作りも終盤に差し掛かってます。
+
+皆様に投票をお願いしたCSS Radarの英語についての記事も今月中には公開予定ですのでお楽しみに。
+
+初のMail Chimp配信のメールマガジンとなりました。  
+TinyLetterと比べると設定事項が多く、やらなければならないことも沢山でしたが、なんとか形になりました。  
+よりよくするために皆様の意見はいつでも募集しています。  
+Twitterでもメールでもご意見をお聞かせいただければ幸いです。
