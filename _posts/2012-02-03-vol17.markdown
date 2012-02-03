@@ -1,0 +1,149 @@
+---
+layout: post
+title: "Vol.17"
+date: 2012-02-03
+---
+
+## Web Design, UX, UI
+
+### [The top mistakes UX designers make: the writeup by Scott Berkun](http://www.scottberkun.com/blog/2012/the-top-mistakes-ux-designers-make-the-writeup/)
+
+UXデザイナが犯しがちな失敗。テクニックではなく態度や文化における失敗について。wordpress.comで働くScott Berkun氏による紹介。  
+
+1. 信頼性を築かない
+2. アドバイスが難しい
+3. 同僚もユーザの1人であることを忘れる
+4. 自らの手を汚さない
+5. 決定権があると錯覚する
+6. 仲間になれる可能性のある人を無視する
+7. アイデアだけ出して、現実化しない
+8. ビジネスを理解しない
+
+UXデザイナであろうと、ウェブデザイナであろうと同じこと。デザイナの仕事の9割はコミュニケーション。モックを作る、プロトタイプを作る。何故、効果的なのかを説明するなど、すべてはユーザとそして一緒に働く人たちとの対話。
+
+### [Wireframing for responsive design by Boagworld](http://boagworld.com/design/wireframing-for-responsive-design/)
+
+レスポンシブウェブデザインにおけるワイヤフレームの立ち位置。  
+レスポンシブなんだから固定幅のワイヤフレームには意味がないと思ったら大間違い。  
+ワイヤフレームはレスポンシブの世界でも問題点を共有し、解決するための糸口を見つけるために必要な大事なフロー。  
+むしろレスポンシブであるが上、妥協点を早めに共有してお互い納得の上で実装を進めるために絶対必要になるだろう。  
+
+### [Responsive Web Design Business Challenges by Cloud Four](http://www.cloudfour.com/responsive-web-design-business-challenges/)
+
+レスポンシブウェブデザインが抱えている問題は少なくない。[こちら](http://css.studiomohawk.com/css/2011/01/24/about-responsive-web-design/)で私もまとめているが
+
+- SEO
+- 広告
+- 集計
+- CDN
+
+この点、特に広告以外の3点はこれまであまり指摘されてこなかった点ではあるが確かに問題点だと言える。  
+またテーブルレイアウトからCSSベースのレイアウトへの移行期には、レスポンシブウェブデザインへの移行期と比べると遥かに問題点が少なかったという指摘もある。  
+これらの点については改めてCSS Radarの記事にも追加しておきます。
+
+### [From “Mobile Friendly” to “Mobile First”by The Easy Designs Blog](http://blog.easy-designs.net/archives/2011/10/12/from-mobile-friendly-to-mobile-first/)
+
+[Adaptive Web
+Design](http://easy-readers.net/books/adaptive-web-design/)の著者であるAaron Gustafson氏が自身のブログをモバイルフレンドリーからモバイルファーストへの転換を図ったケーススタディ。  
+具体例とともに2者の違いを見ることができるのは珍しいので、本文はさておき画像だけでも見てほしい。
+
+### [Why External Links Should Open in New Tabs by UX Movement](http://uxmovement.com/navigation/why-external-links-should-open-in-new-tabs/)
+
+こちらも少しTwitter界隈で話題になった記事。  
+外部リンクを別ウィンドウで開くことはユーザビリティの権威であるJakob
+Nielsen氏の[Top-10 New Mistakes of Web Design](http://www.useit.com/alertbox/990530.html)を読まなくてもよろしくない事はご存知だろう。  
+UX Movementでは外部リンクはタブで開くべきだという提言をした。  
+説得力はそれなりにあるけれど、Jakob
+Nielsen氏の挙げた問題点である戻るボタンを使えない、そもそもユーザ側の操作であるべきアクションを奪うような実装はマズいだろうという点は解決できていない。  
+きちんとしたソースであるUX
+Movementと言えどもきちんとしたユーザビリティテストの結果なしには提言を実践に向ける力を持てないだろう。
+
+## CSS
+
+### [* { box-sizing: border-box } FTW by Paul Irish](http://paulirish.com/2012/box-sizing-border-box-ftw/)
+
+`box-sizing: border-box` とすると `padding` の値を無視して `width` に指定した値通りにボックスモデルはレンダリングされる。  
+これまでのボックスモデルとは異なるレンダリングに変更することができる。  
+Paul Irishだけでなく、quirksmodeのPeter-Paul Koch氏もW3Cのボックスモデルの定義に疑問を持っている。  
+10年ほど前に決められたボックスモデルの定義が正しかったのか？  
+たった1行のコードにも長い歴史に疑問を投げかける力がある。  
+だったらいいなぁが未来を作ったりする、という点では私も賛成できる。実際に利用するかは置いておいて。
+
+## JavaScript
+
+### [Backbone 入門 by IBM developerWorks](http://www.ibm.com/developerworks/jp/web/library/wa-backbonejs/)
+
+IBM developerWorksによるbackbone.jsの入門。  
+backbone.jsは短期間で習得できる軽量のJavaScriptフレームワークとのことで、これのチュートリアルを実際コピペしないで実践してみよう。
+
+## Snippets
+
+### [Star Ratings With Very Little CSS by CSS-Tricks](http://css-tricks.com/star-ratings/)
+
+シンプルでかつ強力なよくある星評価をCSSだけで実装する。Hoverするとちゃんと星の色も変わる。  
+これを可能にするために、文字の流れを反対にするなどかなり賢い実装をしている。  
+[デモはこちら](http://css-tricks.com/examples/StarRating/)
+
+### [CSS3 Image Styles by web designer wall](http://webdesignerwall.com/tutorials/css3-image-styles-part-2)
+
+CSS3の角丸は意外と画像に対しての処理が上手ではない。  
+この問題を解決するためにjQueryを使ってダイナミックに `img` を `span`
+で囲み、それらに対して `:after` を使って画像の上のレイヤにスタイルをかけるという方法を取っている。  
+なんだか面倒な感じもしないでもないが、[デモ](http://webdesignerwall.com/demo/css3-image-styles-part-2/)を見ればそんな気持ちも払拭できる。
+
+## Tool
+
+### [Visualized Git best practices for team: branch, merge, rebase](http://kentnguyen.com/development/visualized-git-practices-for-team/)
+
+Gitをチームで使うためのベストプラクティスのビジュアル化。  
+巨大なプロジェクトではベストにはならないけど、それらはエッジケース。通常は3〜4人のチームでの開発がほとんどだろう。  
+まずはそこからGitを覚える。特にbranch、merge、rebaseについては確実にそうだと言える。
+
+- GUIは使わない。使うコマンドは決して多くない。使うコマンドを覚えてしまおう
+- ブランチを沢山つくる、コミットを沢山する、マージも沢山行う
+- `rebase` で覚えるべきは `git pull --rebase` だけ。自分以外の誰かの `push` を受け入れる際に `rebase` して自分の変更を `push`
+
+### [Javascript development tools](http://clausreinke.github.com/js-tools/resources.html)
+
+JavaScript開発ツール。JavaScriptのためのツール、JavaScriptによるツールを集めたリソース表。  
+とにかく見た目は悪いが圧巻の数が紹介されている。  
+[Google
+Group](http://groups.google.com/group/js-tools/about)を使ってツールを収集しているので、興味があるかたはこちらにも参加しては？
+
+### [Responsive Design Test Bookmarklet](http://www.benjaminkeen.com/misc/bricss/)
+
+前号で紹介したレスポンシブウェブデザインのテストページをiframeで一画面で作成するファイルを紹介したが、これはブックマークレット版。  
+さらに手軽にテストページを作成できる。  
+しかもTwitterで紹介した時よりも高機能になって、どの幅と高さを利用するかのカスタマイズも可能になった。
+
+### [Zocial - CSS3 Button Set](http://zocial.smcllns.com/)
+
+font-faceを利用したアイコン表示を使ったCSS3ボタンセット。総計42のソーシャルサイトのアイコン付きでかつSASSのコードもある。  
+LESSがないのでフォークしてみようかと。
+
+## Misc.
+
+[Everything You Thought You Knew About Learning Is Wrong by Wired.com](http://www.wired.com/geekdad/2012/01/everything-about-learning/)
+
+ウェブ関連ではないが、学ぶことはウェブ業界では避けがたいタスクの1つなので紹介。  
+何か特定の1つについて学ぶよりも、その1つに関連する全体を少しずつでも学んだ方が効果が高い。  
+1つのことに集中する方が効果的に感じるが、同じ時間を費やした際の能力の向上は少しずつ全体を学んだ方が高いそう。  
+また勉強会などに出席する方も多いだろうが、話を聞きながらメモを取るよりも、話を聞き終えてからのほうが効果が高い。  
+人は記憶することに関しては実は得意で思い出すことが得意ではないから。記憶を引き出すことによって記憶そのものへのアクセスが早くなり、結果覚えているという状態になるそう。
+
+## That's it for this week!
+
+みなさんからトピックを選ばせておきながら2ヶ月ちかく待たせてしまった[ウェブデベロッパのための英語](http://css.studiomohawk.com/english/2012/01/29/reading-english-is-not-so-hard/)が公開されました。  
+我ながら実例が少なく説得力に欠けるなと反省。一稿目としてアウトラインを置いたという印象です。  
+記事の方にも反映しますが、英文を読むことと翻訳することとは別の技術です。もちろん英語を話すこととも聞くこととも別です。  
+読む < 聞く < 話す < 翻訳する  
+本当は翻訳するはこの並びにはならないと思いますが、あえて難易度を並べるとこんなイメージです。  
+1行だろうと、1ページであろうと、英文に触れる時間を作る習慣をつくることが大事です。
+
+そんなことをいいながら、今年はさらに翻訳にも力を入れていこうと思ってます。  
+LESSの公式ドキュメントの[日本語訳](http://less-ja.studiomohawk.com/)はその一旦というわけです。  
+翻訳記事、ドキュメント用のブログを立ち上げる予定で、LESSの翻訳のような丸ごと全部とか、私の管理外での翻訳などのログも掲載して行くつもりです。
+
+さて[SwapSkills(25) 時短、効率、スピードアップのための はじめての LESS 入門](http://swapskills.info/month/25.html)が今月18日に迫って来ました。  
+35人会場だったのを60人の会場に変更したそうです。現時点では残席13名とのことですので、参加するか悩んでいた方はぜひこのタイミングで。  
+申し込みは[こちらから](http://swapskills.info/month/25.html#apply)。
