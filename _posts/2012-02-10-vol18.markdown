@@ -1,0 +1,152 @@
+---
+layout: post
+title: "Vol.18"
+date: 2012-02-10 23:30:16
+---
+
+## Web Design, UX, UI
+
+### [Fluid grids, orientation & resolution independence by Responsive News](http://blog.responsivenews.co.uk/post/13925578846/fluid-grids-orientation-resolution-independence)
+
+Responsive Web DesignとFluid Layoutは似て非なるものであるという例の最たる部分。  
+画像や動画などのコンテントはビューポートに比例してサイズが変わるが、タイポグラフィーはそうではない。  
+画像とテキストのコントラスト比が50/50という想定でいると、かなりショッキングな事象に出会える事になる。  
+[こちら](http://static.responsivenews.co.uk/examples/resolution-independent-typography-1.html)に例があるのでお手持ちのデバイスで確認してみてほしい。
+
+もちろんそれぞれの条件に合わせてメディアクエリで細かく指定していけば問題は解決できる。  
+しかし、それではあまりにも未来志向とは言えない。  
+そこで登場するのがビューポートに合わせてルートのフォントサイズを変更するだけで比率を変更できる`rem`を利用する解決。  
+メディアクエリ側でビューポート毎に最適化したルートフォントサイズを決定するだけで、子供達のフォントサイズが変わる。非常に単純ながらエレガントの解決方法だ。  
+
+ビューポートとルートフォントサイズの算出方法については記事にある画像を参照してほしい。  
+こういった概念。ピクセルベースから割合ベースへの転換こそがResponsive Web Designの真骨頂。
+
+### [Wireframes are Dead, Long Live Wireframes by ZURB](http://www.zurb.com/article/898/wireframes-are-dead-long-live-wireframes)
+
+ワイヤフレームを作成するのはもはや時代遅れ。  
+いや、ワイヤフレームそのものは作るけれど、これまでの手法ではなくZURBの作成したRapid Prototypingツールである[Foundation](http://foundation.zurb.com/) などを利用してHTML、CSS、JSで実動するワイヤーフレーム、つまりプロトタイプを作ることを始めよう。  
+
+この場ではデザイナがHTML/CSSを書くべきか否かの議論はしないが、Foundationのようなツールを活用すれば実現可能なアイデアではある。
+
+### [Design 101: Stop Yelling by giant robots smashing into other giant robots](http://robots.thoughtbot.com/post/17163570631/design-101-stop-yelling)
+
+デザイナと名のつく商売をしている人からすれば当たり前の話すぎるデザインの基本。  
+Stop Yelling。叫ぶのを辞めよう。  
+ページ上のすべてを目立たせたいという思いの発露の結果、何も目立たないどころかうるさいだけのページになってしまう。
+  
+エンジニアのためのデザイン言論という視点で書かれた記事ながらコントラストの重要性を上手く説明するためのツールとして活用してほしい。
+
+### [The Discipline of Content Strategy by UIE](http://www.uie.com/articles/discipline_content_strategy/)
+
+コンテントストラテジという単語はウェブデザインやUXの世界で最近ほんとうによく聞くようになってきた。  
+どうしてコンテントに対して戦略なんかが必要なのか、そしてそれがどんなものなのか、どんな利点があり、欠点があるのかについて書かれた入門記事。
+  
+メディアなウェブサイトを作ってきて、そして新聞を大学で勉強してきて、コンテントほど大事な要素はウェブにはないはずだと実感している。
+ユーザー生成コンテンツにクオリティを求めることは不可能だ。と考えている時点でそのサービスの存在意義を考え直した方がいい。  
+
+ものすごく大変でお金もかかるけれど、ユーザが求めているのは書く場ではない。よいコンテンツと出会える場をつくるために絶対に必要。
+
+### [Why Design Methods Matter by ZURB](http://www.zurb.com/article/896/why-design-methods-matter)
+
+ZURBで実践しているデザイン方法論達。確立した標準化された方法論は安定したクオリティの成果物を生み出すのに必要。
+- 分析
+- ブレインストーム
+- 批評
+- コンセプトテスト
+- インタビュー
+- プロトタイプ
+- QAテスト
+- スケッチ
+- ユーザテスト
+このようなプロセスを経てUXを確立しデザインに落とし込んでいく。  
+ただPhotoshopを扱う人にならないために知っておきたい方法論達。
+
+### [Redefined by Trent Walton](http://trentwalton.com/2012/02/02/redefined/)
+
+Responsive Web Design以前に10年ものキャリアを積んできたTrent Walton。Responsive Web Designに対して初め多くの疑問やこれまでやってきた経験則との違いに戸惑ったものの、結局Responsive Web Designを実践することは彼に取ってピクセルデザインから割合/比率デザインへの移行という大転換を行うために必要な考え方だったそう。  
+他にもプログレッシブエンハンスメントやウェブフォントなど新しい技術に対する挑戦もResponsie Web Designを作るプロセスから学ぶことができると書いている。
+
+### [An Event Apart: Handcrafted Patterns by LukeW](http://www.lukew.com/ff/entry.asp?1491)
+
+毎回恒例となってきたLuke Wroblewski氏によるA Event Apartのメモ。今回はDribbbleのCo-founderであるDan Cederholm氏によるハンドクラフトのパターンについての発表のメモ。
+
+### [Structure First. Content Always. by Mark Boulton](http://www.markboulton.co.uk/journal/comments/structure-first-content-always)
+
+メディア業のウェブデザイナとして長らく働いて私がたどり着いた1つのアプローチがコンテンツファースト。モバイルファーストではなくコンテンツファーストでデザインを始めることは結果的にモバイルファーストにつながっていく。  
+しかし現実的にコンテンツが完璧な状態でデザインタスクに入るということはない。これは編集者という職種の人を多数抱えていた前職でもそうなのだからどこでも同じに違いない。  
+
+だからまずレイアウトのストラクチャを先に作っていく。このストラクチャにコンテンツもある程度は影響を受ける。このせめぎ合いがよいデザインを生み出す流れにつながっていく。  
+
+新聞の世界にもレイアウトを専業にしている人がいるほどだからウェブにだってあってもいい。コミュニケーションをキチンととって柔軟度を高くデザインを作っていくことが最良の道だと思う。
+
+### [Target Doesn't Want to be a Showroom; Is a Showroom by ZURB](http://www.zurb.com/article/899/target-doesnt-want-to-be-a-showroom-is-a-)
+
+赤い二重丸のロゴのTarget。アメリカ本土に行くとよく見かけるちょっとおしゃれなアイテムが売っているスーパーマーケットはAmazonのショーケースにはなりたくないというスタンスを取っている。実物を見てAmazonで買っていく、そんな流れが当たり前になっているからだ。 
+ 
+この記事ではそんなTargetに買い物に出かけた際、ゲームを購入しようと思ったけど結局ゲームを買うには店員に声をかけなくてはならず、レジに並んでいる間にAmazonでそのゲームを購入するという不思議な行動をするはめになった。
+Appleストアではそんな問題は発生しないように設計されている。
+  
+リアルストアの話だけれど、ウェブサイトにも当てはまる。ただ安いからでは消耗戦。それ以外のカスタマーサポートのあり方を考えるいいきっかけになる記事。
+
+## CSS
+
+### [Using max-width on images can make them disappear in IE8 by 456 Berea Street](http://www.456bereastreet.com/archive/201202/using_max-width_on_images_can_make_them_disappear_in_ie8/)
+
+IE8にて`max-width`を画像に指定するとたまに画像が表示されない、というIEらしいバグがある。  
+Responsive Web Designでは欠かすことの出来ないスタイルなだけに困るバグ。  
+
+筆者によると
+- `img`にCSSにて`max-width`が指定されていて
+- `width`の属性を記述していて
+- 幅を指定しないで`float`している場合
+に発生するバグだそうだ。  
+解決としては、`width: auto`も`max-width`とともに指定する。
+
+### [Multiple Attribute Values by CSS-Tricks](http://css-tricks.com/multiple-attribute-values/)
+
+複数classをCSSで指定できるように、複数の属性にもセレクタはある。  
+IE6のサポートをしなくていい世界の実装について、きちんと知っていくと効率的。
+
+## JavaScript
+
+### [Scaling Your JavaScript Applications (Videos)](http://addyosmani.com/scalable-javascript-videos/)
+
+Addy Osmani氏によるスケーラブルなJSのパターンについての動画、スライド。内容はすばらしく無料で提供されていることに畏れを抱くほど。  
+
+字幕なしの英語は少し難しいかも知れないが、少しでも英語に覚えがあるかたはぜひ。
+
+### [Keep your modules and functions small by Miller Medeiros](http://blog.millermedeiros.com/keep-your-modules-and-functions-small/)
+
+こちらもJSパターンの話。  
+モジュールや関数は短くすれば短くするほど使い回しが効く。  
+目標は1行でモジュールや関数を作ること。  
+実例付きで非常にわかりやすい。
+
+### [HTML5: Changing the browser-URL without refreshing page by Spoiled Milk](http://spoiledmilk.dk/blog/html5-changing-the-browser-url-without-refreshing-page)
+
+HTML5では`onpopstate`というイベントが利用できる。　　
+ブラウザで表示されているURLをJavaScriptから変更することができる。  
+
+なんのために必要かというと、これまではAjaxなどでコンテンツを変更する際にはハッシュ(#)を使ってURLを変更していたわけで、その変更を知るためには監視しなくてはならず、`setInterval`などを使って監視していた。  
+その苦労を払拭する非常に便利なイベント。  
+
+### [Differences Between jQuery .bind() vs .live() vs .delegate() vs .on() by Web Dev .NET](http://www.elijahmanor.com/2012/02/differences-between-jquery-bind-vs-live.html)
+
+jQueryのイベントバインダメソッドである`.bind()`、`.live()`、`delegate()`、.on()の違いについて。  
+結論としてはjQuery1.7以降を利用できる環境であれば`.on()`のシンタックスを覚えるのがベスト。なぜなら内部的には他の3つは結局`.on()`メソッドにて処理されているから。  
+
+`.on()`はシンタックスによって`.bind()`、`.live()`、`delegate()`を使い分ける。パフォーマンス的には`delegate()`がベストなので、`.on()`メソッドのシンタックスでも`delegate()`のものを使うとよいそう。
+
+## Tool
+
+### [Pears](http://pea.rs/)
+
+DribbbleのCo-founderであるDan Cederholm氏が作成したWordPressベースのスタイルガイドジェネレータ。  
+Pearsだけでもかなりのパターンが登録されているが、これを拡張し、削除し、カスタマイズしてプロジェクトごとのスタイルガイドを作っていくのが本分。  
+本格的にスタイルガイドをつくるのが商売になってきそうなので、参考になるはず。
+
+## That's it for this week!
+
+今週の半ばに[CSSの記述が3倍速くなる「LESS」の使い方](http://ascii.jp/elem/000/000/668/668205/)という記事がAscii WebProfessionalに掲載されました。書いたのは私。SwapSkillsがらみで寄稿させていただけることになったのですが、意外にもそれなりの反応をいただいているようです。  
+
+TwitterやFacebookコメントの内容も見させていただき、来週に迫った[SwapSkills(25) 時短、効率、スピードアップのための はじめての LESS 入門](http://swapskills.info/month/25.html)にて活かしていきたいなと思います。
