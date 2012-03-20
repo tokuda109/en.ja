@@ -4,7 +4,7 @@ tagline: Translated Articles for Front End Developers
 desc: フロントエンドデベロッパのためのフロントエンドデベロッパによる英記事翻訳&ログ
 url: http://enja.studiomohawk.com
 #Deployment Settings
-lessc: _less.js/bin/lessc
+lessc: _lessjs/bin/lessc
 pygments:    true
 markdown:    kramdown
 permalink:   pretty
