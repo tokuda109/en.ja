@@ -119,7 +119,7 @@ Color schemes
 No styleguide reference.
 */
 
-// solarized - http://j.mp/s9Xuw9
+/* solarized - http://j.mp/s9Xuw9
 
 @base03:    #002b36;
 @base02:    #073642;
@@ -137,6 +137,7 @@ No styleguide reference.
 @blue:      #268bd2;
 @cyan:      #2aa198;
 @green:     #859900;
+*/
 
 /* Tomorrow Night - http://j.mp/wvO4U4
 
@@ -153,7 +154,23 @@ No styleguide reference.
 @cyan:      #66cccc;
 @green:     #99cc99;
 
-* /
+*/
+
+// Tomorrow
+
+@base03:    #ffffff;
+@base02:    #efefef;
+@base01:    #d6d6d6;
+@base0:     #4d4d4c;
+@subtle:    #8e908c;
+@yellow:    #eab700;
+@orange:    #f5871f;
+@red:       #c82829;
+@violet:    #8959a8;
+@blue:      #4271ae;
+@cyan:      #3e999f;
+@green:     #718c00;
+
 
 /* Andy Clarke's Method - http://j.mp/AcDGjL
 
@@ -182,6 +199,11 @@ No styleguide reference.
 
 */
 
+/* Background */
+@graphy: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAACgCAMAAACsXRuGAAAADFBMVEWIiIjd3d3y8vLm5uZzdc63AAAAbklEQVR42u3ZIQ4AIAwDwI39/8/wAlTFxFUgm5ALmFZV51Iv52Vyx/7CzhdONr3/ylCgQIECBQoUKFCgQIECBQoUKFCgQIECBcrmccGe4qX4vqBAgQIFChQoUKBAgQIFChQoUKBAgQIFij3lX3gBXBBzc8FaGvIAAAAASUVORK5CYII=';
+@struckaxiom: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFEAAABRCAYAAACqj0o2AAABdUlEQVR42u3dMQrDMBBEUZ/ct41TxpD0iRUIGE83+YWKX6y05fLQSgIVWrb7/f3Y9/fz9Zo2bts2ZV3Dbfgtv+SYRSwhl5GcIEUs4ot4gRSxQkxIESvEhBSxQkxIESvEhBSxQkxIESvEhBSxQkxIESvEhBSxQkxIEQOxgxQxEDtIEQOxgxRxDACkiBCkiBCkiBCkiBCkiBCkiBCkiBCkiBCkiBCkiBCkiBCkiBCkiBCkiBCkiBCkiBCkiBCkiBCkiBCkiBCkiBCkiBCkiBCkiADk/IijwNljXdeZ65t0JeYV59fatvMfiOc9UsQS8XrYiFgiXiFFrBATUsQKMSFFrBATUsQKMSFFrBATUsQKMSFFrBATUsQKMSFFrBATUsRA7CBFDMQOUsRA7CBFhJ4aRIQgRYQgRYQgRYQgRYQgRYQgRYQgRYQgRYQgRYQgRYQgRYQgRYQgRYQgRYQgRYQgRYQgRYQgRYQgRSQhlyMR8U9I/2MBID/X4Iw6HFsvLgAAAABJRU5ErkJggg==';
+@fakebrick: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEwAAABMCAYAAADHl1ErAAAApElEQVR42u3UKQ4AQQhFQRyaK3D/O/YyYiRJ+xJfvGBJRWauu+7+pueOqlpn/0HPHT7nrcPnvDXDGMYwhjGMYZphDGMYwximGcYwhjGMYQzTDGMYwxjGMM0whjGMYQxjmGYYwxjGMIZphjGMYQxjGMM0wxjGMIYxTDOMYQxjGMMYphnGMIYxjGGaYQxjGMMYxjDNMIYxjGEM0wxjGMMYxjCG6bk3XALG47ODPVoAAAAASUVORK5CYII=';
+@blizzard: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAMAAADzN3VRAAAAJ1BMVEX+/Pv8+vf59/T8+vj7+fb6+Pb9/Pz9/Pv8/Pn8+/j8+/n////9/PpG/iirAAAAhElEQVR42oXQSxICIQxF0aiNfG72v14blDaSWExOMXuXSK1HuleOxHgN6EjRXB4RovLMekInG4Tait4CRFtrauCE/noXONgW0FEG34JzjZ9xXIFlFuAK/A24KIgyJ5dryBznIixgKUh/CvDfpxMUZFuwgCngs7spILqBeclY8xAU7G/wAqrXE9DRGlMBAAAAAElFTkSuQmCC';
 /*
 Since I'm Japanese most of the time I use @font-face it is for logo and/or icon.
 Fonts should be placed at skin/font dir
@@ -244,9 +266,9 @@ LESS helper
 No styleguide reference.
 */
 .link-block {
-	background-color: @base2;
+	background-color: @base02;
 	margin-right: 16px;
 	padding: 3px 5px;
 		&:link { border-bottom: 0 none !important; }
-		&:hover { background-color: @base3; }
+		&:hover { background-color: @base03; }
 }

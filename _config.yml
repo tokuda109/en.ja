@@ -1,8 +1,8 @@
 #Presentation Settings
-sitename: CSS Radar Newsletter
-tagline: Weekly Newsletter For Front End Developers
-desc: CSS Radar Newsletterはcssradar @ Twitterでつぶやいている最新の海外ウェブデベロップメント関連の情報をまとめて紹介しているメールマガジンです。
-url: http://newsletter.studiomohawk.com
+sitename: en.ja
+tagline: Translated Articles for Front End Developers
+desc: フロントエンドデベロッパのためのフロントエンドデベロッパによる英記事翻訳&ログ
+url: http://enja.studiomohawk.com
 #Deployment Settings
 lessc: _less.js/bin/lessc
 pygments:    true
