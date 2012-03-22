@@ -705,6 +705,7 @@ a:hover {
   padding-top: 1.625em;
   padding-bottom: 1.625em;
 }
+.unit-article header h1,
 .unit-article header h2 {
   margin-top: 0;
 }
