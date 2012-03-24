@@ -204,6 +204,7 @@ No styleguide reference.
 @struckaxiom: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFEAAABRCAYAAACqj0o2AAABdUlEQVR42u3dMQrDMBBEUZ/ct41TxpD0iRUIGE83+YWKX6y05fLQSgIVWrb7/f3Y9/fz9Zo2bts2ZV3Dbfgtv+SYRSwhl5GcIEUs4ot4gRSxQkxIESvEhBSxQkxIESvEhBSxQkxIESvEhBSxQkxIESvEhBSxQkxIEQOxgxQxEDtIEQOxgxRxDACkiBCkiBCkiBCkiBCkiBCkiBCkiBCkiBCkiBCkiBCkiBCkiBCkiBCkiBCkiBCkiBCkiBCkiBCkiBCkiBCkiBCkiBCkiBCkiADk/IijwNljXdeZ65t0JeYV59fatvMfiOc9UsQS8XrYiFgiXiFFrBATUsQKMSFFrBATUsQKMSFFrBATUsQKMSFFrBATUsQKMSFFrBATUsRA7CBFDMQOUsRA7CBFhJ4aRIQgRYQgRYQgRYQgRYQgRYQgRYQgRYQgRYQgRYQgRYQgRYQgRYQgRYQgRYQgRYQgRYQgRYQgRYQgRSQhlyMR8U9I/2MBID/X4Iw6HFsvLgAAAABJRU5ErkJggg==';
 @fakebrick: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEwAAABMCAYAAADHl1ErAAAApElEQVR42u3UKQ4AQQhFQRyaK3D/O/YyYiRJ+xJfvGBJRWauu+7+pueOqlpn/0HPHT7nrcPnvDXDGMYwhjGMYZphDGMYwximGcYwhjGMYQzTDGMYwxjGMM0whjGMYQxjmGYYwxjGMIZphjGMYQxjGMM0wxjGMIYxTDOMYQxjGMMYphnGMIYxjGGaYQxjGMMYxjDNMIYxjGEM0wxjGMMYxjCG6bk3XALG47ODPVoAAAAASUVORK5CYII=';
 @blizzard: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAMAAADzN3VRAAAAJ1BMVEX+/Pv8+vf59/T8+vj7+fb6+Pb9/Pz9/Pv8/Pn8+/j8+/n////9/PpG/iirAAAAhElEQVR42oXQSxICIQxF0aiNfG72v14blDaSWExOMXuXSK1HuleOxHgN6EjRXB4RovLMekInG4Tait4CRFtrauCE/noXONgW0FEG34JzjZ9xXIFlFuAK/A24KIgyJ5dryBznIixgKUh/CvDfpxMUZFuwgCngs7spILqBeclY8xAU7G/wAqrXE9DRGlMBAAAAAElFTkSuQmCC';
+
 /*
 Since I'm Japanese most of the time I use @font-face it is for logo and/or icon.
 Fonts should be placed at skin/font dir
@@ -212,32 +213,20 @@ And icon font shoud be called via data-icon attr. See http://j.mp/s8zP67
 No styleguide reference.
 */
 
-/* Pictos Font
-* Copyright © 2010 Drew Wilson
-* http://www.drewwilson.com  -  http://pictos.drewwilson.com
-*
-* The fonts included in this stylesheet are subject to the End User License you purchased
-* from Drew Wilson. The fonts are protected under domestic and international trademark and
-* copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
-* distributing this font software.
-*
-* This font is NOT free. It is illegal to use this font without paying for a license.
-*/
-
 @font-face {
-	font-family: 'Pictos';
-	src: url('/font/pictos-web.eot');
+	font-family: 'fontomas';
+	src: url('/font/fontomas-webfont.eot');
 	src: local('☺'),
-		 url('/font/pictos-web.woff') format('woff'),
-		 url('/font/pictos-web.ttf') format('truetype'),
-		 url('/font/pictos-web.svg#webfontIyfZbseF') format('svg');
+		 url('/font/fontomas-webfont.woff') format('woff'),
+		 url('/font/fontomas-webfont.ttf') format('truetype'),
+		 url('/font/fontomas-webfont.svg#webfontIyfZbseF') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
-.icon-pictos:before {
+.icon-fontomas:before {
 	content: attr(data-icon);
-	font-family: 'Pictos';
-	margin: 0 0.35em 0 0;
+	font-family: 'fontomas';
+	margin: 0 0.7em 0 0;
 	font-size: 20px;
 	line-height: normal;
 	font-weight: normal;

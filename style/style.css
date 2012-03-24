@@ -594,28 +594,17 @@ And icon font shoud be called via data-icon attr. See http://j.mp/s8zP67
 
 No styleguide reference.
 */
-/* Pictos Font
-* Copyright © 2010 Drew Wilson
-* http://www.drewwilson.com  -  http://pictos.drewwilson.com
-*
-* The fonts included in this stylesheet are subject to the End User License you purchased
-* from Drew Wilson. The fonts are protected under domestic and international trademark and
-* copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
-* distributing this font software.
-*
-* This font is NOT free. It is illegal to use this font without paying for a license.
-*/
 @font-face {
-  font-family: 'Pictos';
-  src: url('/font/pictos-web.eot');
-  src: local('☺'), url('/font/pictos-web.woff') format('woff'), url('/font/pictos-web.ttf') format('truetype'), url('/font/pictos-web.svg#webfontIyfZbseF') format('svg');
+  font-family: 'fontomas';
+  src: url('/font/fontomas-webfont.eot');
+  src: local('☺'), url('/font/fontomas-webfont.woff') format('woff'), url('/font/fontomas-webfont.ttf') format('truetype'), url('/font/fontomas-webfont.svg#webfontIyfZbseF') format('svg');
   font-weight: normal;
   font-style: normal;
 }
-.icon-pictos:before {
+.icon-fontomas:before {
   content: attr(data-icon);
-  font-family: 'Pictos';
-  margin: 0 0.35em 0 0;
+  font-family: 'fontomas';
+  margin: 0 0.7em 0 0;
   font-size: 20px;
   line-height: normal;
   font-weight: normal;
@@ -700,28 +689,36 @@ a:hover {
 }
 /* MAIN
 --------------------------------------------------------------------------------- */
-.unit-article header {
+.unit-article header,
+.the-article header {
   margin-bottom: 1.625em;
   padding-top: 1.625em;
   padding-bottom: 1.625em;
 }
 .unit-article header h1,
-.unit-article header h2 {
+.the-article header h1,
+.unit-article header h2,
+.the-article header h2 {
   margin-top: 0;
 }
-.unit-article header .meta p {
+.unit-article header .meta p,
+.the-article header .meta p {
   margin-bottom: 0;
   margin-left: 0;
 }
-.unit-article header .meta p .update-pub:before {
+.unit-article header .meta p .update-pub:before,
+.the-article header .meta p .update-pub:before {
   content: "Updated:";
 }
-.unit-article header .meta p .update-pub:after {
+.unit-article header .meta p .update-pub:after,
+.the-article header .meta p .update-pub:after {
   content: "/";
 }
-.unit-article header .meta p .date-pub:before {
+.unit-article header .meta p .date-pub:before,
+.the-article header .meta p .date-pub:before {
   content: "Published:";
 }
+h1:first-child,
 h2:first-child {
   margin-top: 0;
 }
