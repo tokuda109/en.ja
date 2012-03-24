@@ -8,4 +8,4 @@
 ブログはJekyllというここgithubでも利用されている静的ブログ生成ツールを使っています。  
 日本語による詳しい解説は[こちら](http://css.studiomohawk.com/jekyll/2011/06/11/jekyll/)からどうぞ。私の書いた記事ですが。
 
-またissuesを利用して記事のリクエストを受け付けています。
+また[issues](https://github.com/studiomohawk/en.ja-feedback/issues)を利用して記事のリクエストを受け付けています。
