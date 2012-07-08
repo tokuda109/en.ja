@@ -10,7 +10,6 @@ title: en-ja
 			<header>
 				<div class="unit-head">
 					<div class="unit-inner unit-head-inner">
-						<h2 class="h2 entry-title"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
 						<div class="meta">
 							<p class="date-publish">
 								<date class="date-pub" title="{{ post.date | date_to_xmlschema }}" datetime="{{ post.date | date_to_xmlschema }}" pubdate>
@@ -20,14 +19,10 @@ title: en-ja
 								</date>
 							</p>
 						</div><!-- meta -->
+						<h2 class="h2 entry-title"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
 					</div><!-- unit-inner -->
 				</div><!-- unit-head -->
 			</header>
-			<div class="bd">
-				<div class="entry-content">
-					{{ post.content }}
-				</div><!-- entry-content -->
-			</div><!-- bd -->
 		</div><!-- content -->
 	</div><!-- unit-inner -->
 </article>
