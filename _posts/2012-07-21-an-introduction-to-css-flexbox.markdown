@@ -1,10 +1,12 @@
 ---
 layout: post
 title: "An Introduction to the CSS Flexbox Module"
-date: 2012-07-20 00:37:52
+date: 2012-07-21 01:00:00
 ---
 
-CSS, despite its relatively low perceived skill ceiling, always seems to have a killer feature up its sleeve.
+翻訳する記事は、Umar Hansaさんによって書かれた[An Introduction to the CSS Flexbox Module](http://net.tutsplus.com/tutorials/html-css-techniques/an-introduction-to-css-flexbox/)という記事を翻訳したものです。以下翻訳部分です。
+
+CSSは比較的容易に習得可能な技術であるにも関わらず、常にキラーとなる機能があるように思います。
 メディアクエリーはどのようにレスポンシブレイアウトを可能にし、フロントエンド開発に革命を起こしたか記憶にありますか?
 今回、CSS3で新しく追加されたフレックスボックスという新しいレイアウトモードについて紹介したいと思います。
 ウズウズしていることでしょう。ではやってみましょう。
@@ -21,7 +23,7 @@ CSS, despite its relatively low perceived skill ceiling, always seems to have a 
 
 ## レイアウトモードの背景
 
-CSSフレックスボックスは本質的にはレイアウトのモードのことです。
+CSSフレックスボックスは基本的にはレイアウトのモードのことです。
 CSSにはレイアウトのモードは既に存在していて、長い間使われてきました。
 レイアウトのモードの例の一つとして**ブロック**(display: block)があります。
 ブロックレイアウトはドキュメント全体のスタイルを定義する素晴らしい方法で、ほとんどの要素は[デフォルトでブロックレベルの要素](https://developer.mozilla.org/en/HTML/Block-level_elements)としてブラウザに扱われます。
@@ -29,7 +31,7 @@ CSSにはレイアウトのモードは既に存在していて、長い間使�
 
 ブロック要素ではない要素もあって、それらは多分**インライン要素**だと思います。
 アンカータグ、インプットタグ、ストロングタグは[インラインレベル要素](http://en.wikipedia.org/wiki/HTML_element#Inline_elements)です。
-Chromeの[開発者ツール](https://developers.google.com/chrome-developer-tools/)は、開発者が明示的に設定していないCSSプロパティや値が要素に対してどのように適用されているかを“[computed style](https://developers.google.com/chrome-developer-tools/docs/elements-styles#computed_style)”で表示させることができます。
+Chromeの[開発ツール](https://developers.google.com/chrome-developer-tools/)は、開発者が明示的に設定していないCSSプロパティや値が要素に対してどのように適用されているかを“[computed style](https://developers.google.com/chrome-developer-tools/docs/elements-styles#computed_style)”で表示させることができます。
 
 ここではJavaScriptの[window.getComputedStyle](https://developer.mozilla.org/en/DOM/window.getComputedStyle)メソッドを使って要素のcomputed styleにアクセスする簡単なティップスを紹介します。
 
@@ -37,7 +39,7 @@ Chromeの[開発者ツール](https://developers.google.com/chrome-developer-too
     window.getComputedStyle(elem).display; //block
 
 ブロックやインラインのレイアウトモードがある一方、CSSにはテーブルやポジションによるレイアウトもあります。
-レイアウトモードについて今回扱うのは、ウェブページのレイアウトをするときにフレキシビリティさをよりあげるために使われるフレックスボックスは新しいレイアウトモードだからです。
+今回の記事でレイアウトモードについて扱うのは、ウェブページのレイアウトをするときにフレキシビリティさをよりあげるために使われるフレックスボックスは新しいレイアウトモードだからです。
 
 フレックスボックスレイアウトは、アイテムをレイアウトするための記述のルールを簡単にするためにシンプルなテクニックを提供しています。
 
@@ -84,7 +86,7 @@ Chromeの[開発者ツール](https://developers.google.com/chrome-developer-too
 アイテム(リストアイテムの要素)が水平に展開(展開する方向は、メインの軸として知られています)されていること気づいたかもしれません。
 幸運にも展開する方向はコントロールする(なので、メインの軸と考えることができます)ことができ、フロートを使わなくてもいいようになります!
 
-## Exploring flex-direction
+## flex-directionを探ってみる
 
 フレックスボックスのアイテムをレイアウトする場合に、`flex-direction`プロパティで方向を指定することが可能です。
 プロパティは値として、`row、row-reverse、column、column-reverse`を指定することができます。
@@ -103,16 +105,17 @@ Chromeの[開発者ツール](https://developers.google.com/chrome-developer-too
 
 ## flex-wrapでラップする
 
-By default, a flexbox is single-line.
-One which cannot contain its children may overflow using the flex-wrap property;
-we can instruct the flexbox to become multi-line, in which case the flexbox items can wrap over.
-flex-wrap accepts the values, nowrap (the default value), wrap & wrap-reverse.
+デフォルトで、フレックスボックスは一行に収まります。
+flex-wrapプロパティを使いつつ、はみ出すかもしれない子要素を含めることはできないので、
+フレックスボックスのアイテムをはみ出す可能性がある場合には、複数行になるようにフレックスボックスに指定することができます。
+flex-wrapは値に、nowrap(デフォルト値)、wrap、wrap-reverseを受け取ります。
 
 ![Very basic example](http://d2o0t5hpnwv4c1.cloudfront.net/2071_cssflexbox/flex-direction-example.png)
 
-Notice how, in the demo, the items ‘wrap’ over, since they cannot be contained within their small 100px parent.
-Using the developer tools, try toggling the overflow: hidden and -webkit-flex-wrap bits.
-Without the flex-wrap and overflow properties, the items overflow their parent.
+[デモ](http://jsbin.com/iqarak/edit#html,live)ではどうなっているか分かると思いますが、
+アイテムは親要素の`100px`という小ささの中に収まらないので、アイテムははみ出します。
+開発者ツールを使って、`overflow: hidden`と`-webkit-flex-wrap`を切り替えてみて下さい。
+`flex-wrap`と`overflow`がないとアイテムは親要素からはみ出します。
 
 以下に示しているとおり、`flex-direction`と`flex-wrap`には簡略化されて使いやすいプロパティがあります。
 
@@ -139,7 +142,7 @@ Without the flex-wrap and overflow properties, the items overflow their parent.
 
 ![Boring menu](http://d2o0t5hpnwv4c1.cloudfront.net/2071_cssflexbox/slightly-better-menu.png)
 
-## Flexing
+## 伸縮させる
 
 > Flexingは拡大可能なスペースまで広げるためにwidthやheightを変更するためのコンテナの機能です。
 
@@ -158,7 +161,7 @@ flexプロパティは、flexbox自体に適用されているわけではなく
 
 ![The rcomputed width of a flexbox item](http://d2o0t5hpnwv4c1.cloudfront.net/2071_cssflexbox/flexbox-item-computed-style.jpg)
 
-- In the first line, there are three items, which should be around 60pxflex property (that’s a total of 180px).
+- 最初の行で`60pxのflex`プロパティがかかっている3つのアイテムがあります(合計で`180px`)。
 - フレックスボックス全体の幅は`300px`です。そして`180px`を引くと`120px`になるが実際には空いているスペースが`120px`もないことがわかります。
 - 個々のフレックスボックスのアイテムは`10px`の`margin-right`がかかっています。3つのアイテムのトータルで`30px`で、空いているスペースが残り`90px`あります。
 - しかしちょっと待って。
@@ -171,11 +174,9 @@ flexプロパティは、flexbox自体に適用されているわけではなく
 
 推測できると思いますが、最後の行(‘Contact us’のアイテム)はフレックスボックスの幅全体に引き伸ばされています。
 
-フレックスボックスのアイテム異なる幅が与えられています。
-2つのアイテムの間の空いているスペースを埋める際に
-Flexbox items can be given different widths;
-an item with a flex of 2 is said to be twice as flexible as an item with a flex of 1.
-So, when it comes to distributing free space between the two items, the item with a flex of 1 will be given half the space that the item with a flex of 2 receives.
+フレックスボックスのアイテムは違う幅が割り当てられます。
+`flex`を`2`にしたアイテムは、`flex`を`1`にしたアイテムの**2倍くらい引き伸ばされる**と言われています。
+2つのアイテムの間の空いているスペースを埋める際に、flexを1にしたアイテムはflexを2にしたアイテムの半分のスペースが割り当てられます。
 
 ## 並べ替え
 
@@ -204,7 +205,7 @@ So, when it comes to distributing free space between the two items, the item wit
 
 ## 整列
 
-flex-packプロパティを使うことでメインとなる軸に沿って、フレックスボックスのアイテムを整列させることができます。
+`flex-pack`プロパティを使うことでメインとなる軸に沿って、フレックスボックスのアイテムを整列させることができます。
 このプロパティは値として以下のものが指定できます。
 
 - start
@@ -213,15 +214,13 @@ flex-packプロパティを使うことでメインとなる軸に沿って、�
 - justify
 - distribute
 
-このチュートリアルのデモはいくつかの異なる位置のサンプルを紹介しています。
+このチュートリアルのデモは、異なる整列方法で配置しているサンプルをいくつか紹介しています。
+[jsbinのサンプル](http://jsbin.com/oyigap/4/edit)を見ると、アイテムが一つの軸(メインの軸)に沿ってセンタリングされていることが分かります。
+これは、flexboxのアイテムが配置されている際の基本的な軸です。
 
-The demo for this tutorial provides some examples of the different types of alignment.
-Looking at the jsbin example, we can see that the items have only been centered on one axis: the main axis.
-This is essentially the axis upon which the flexbox items are placed.
-
-flex-directionプロパティを調整することで方向を変えることができます。
-カラムに設定することで、メインの軸を変わったのがわかると思います。
-軸をクロスさせて位置に影響をあたえるためには、flex-alignを使うことが可能です。
+`flex-direction`プロパティを調整することで方向を変えることができます。
+`column`に設定することで、[メインの軸を変わったのがわかる](http://jsbin.com/oyigap/3/edit)と思います。
+軸をクロスさせて位置を変えるためには、[`flex-align`を使うことが可能](http://jsbin.com/oyigap/5/edit)です。
 
 ## アイテムのセンタリング
 
@@ -250,7 +249,7 @@ flex-directionプロパティを調整することで方向を変えることが
 - [flexiejs](http://flexiejs.com/)はフレックスボックスの機能をクロスブラウザ対応にします。
 - [Modernizr](http://modernizr.com/)は[フレックスボックスがサポート](http://modernizr.com/docs/#flexbox)されているかをチェックすることができます。
 - [html5rocks](http://www.html5rocks.com/)には[フレックスボックスのチュートリアル](http://www.html5rocks.com/en/tutorials/flexbox/quick/)があります。
-- Alex Russell, who works on Google Chrome, has an interesting set of CSS classes for using flexbox.
+- Google Chromeの開発者であるAlex Russellさんはフレックスボックスを使うための[CSSクラス](http://infrequently.org/2009/08/css-3-progress/)のセットについて興味深い言及をしています。
 - inserthtmlにはフレックスボックスの仕様に関する興味深い[チュートリアル](http://www.inserthtml.com/2012/05/css3-flex-box-specification-change-layout-design/)があります。
 - [Stunning CSS3](http://www.stunningcss3.com/code/index.html)という本にはフレックスボックスの章があります。
 
